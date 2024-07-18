@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/table-binance/static/js/main.ca33ca3a.js",
+    "index.html": "/table-binance/index.html",
+    "main.ca33ca3a.js.map": "/table-binance/static/js/main.ca33ca3a.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.ca33ca3a.js"
+  ]
+}

@@ -1,5 +1,9 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import axios from 'axios';
+import React, {
+    useState,
+    useEffect
+} from 'react';
+
+// import axios from 'axios';
 
 import {
     StyledTable,
@@ -13,12 +17,17 @@ import {
 
 import { initialData } from '../data/data';
 
+import { Popup } from './PopUp';
+
 export const TablePage = () => {
 
     const [data, setData] = useState(initialData);
     const [sortConfig, setSortConfig] = useState({ key: '', direction: 'default' });
+    const [selectedData, setSelectedData] = useState(null);
+    const [popupOpen, setPopupOpen] = useState(false);
 
     // useEffect(() => {
+
     //     const fetchData = async () => {
     //         try {
     //             const response = await axios.get('https://66966a0d0312447373c2706b.mockapi.io/api/list/Jack');
@@ -33,14 +42,13 @@ export const TablePage = () => {
     const preprocess = (value, key) => {
 
         if (key === 'PnL' || key === 'ROI' || key === 'Margin' || key === 'Funding') return parseFloat(value.replace(/[^\d,.+-]/g, '').replace(',', '.'));
-
         if (key === 'Time') return parseFloat(value.replace(' hours', ''));
 
         return value;
 
     };
 
-    const handleSort = useCallback((key) => {
+    const handleSort = (key) => {
 
         let direction = 'ascending';
 
@@ -56,6 +64,7 @@ export const TablePage = () => {
 
             if (aValue > bValue) return direction === 'ascending' ? 1 : -1;
             if (aValue < bValue) return direction === 'ascending' ? -1 : 1;
+
             return 0;
 
         });
@@ -63,7 +72,7 @@ export const TablePage = () => {
         setData(direction === 'default' ? initialData : sortedData);
         setSortConfig({ key, direction });
 
-    }, [data, sortConfig]);
+    };
 
     const getSortIcon = (columnKey) => {
 
@@ -78,58 +87,205 @@ export const TablePage = () => {
 
     };
 
+    const handleOpenPopup = (item) => {
+
+        setSelectedData(item);
+        setPopupOpen(true);
+
+    };
+
+    const handleClosePopup = () => {
+
+        setSelectedData(null);
+        setPopupOpen(false);
+
+    };
+
+    useEffect(() => {
+
+        if (popupOpen) document.body.style.overflow = 'hidden';
+        else document.body.style.overflow = 'auto';
+
+
+        return () => document.body.style.overflow = 'auto';
+
+    }, [popupOpen]);
+
     return (
+
         <>
+
             <StyledTable striped bordered hover>
+
                 <Thead>
+
                     <Tr>
-                        <Th>Name</Th>
-                        <Th onClick={() => handleSort('entryPoint')}>
+
+                        <Th>
+
+                            Name
+
+                        </Th>
+
+                        <Th
+                            onClick={() => handleSort('entryPoint')}
+                        >
+
                             Entry point {getSortIcon('entryPoint')}
+
                         </Th>
-                        <Th onClick={() => handleSort('PnL')}>
+
+                        <Th
+                            onClick={() => handleSort('PnL')}
+                        >
+
                             PnL {getSortIcon('PnL')}
+
                         </Th>
-                        <Th onClick={() => handleSort('ROI')}>
+
+                        <Th
+                            onClick={() => handleSort('ROI')}
+                        >
+
                             ROI {getSortIcon('ROI')}
+
                         </Th>
-                        <Th onClick={() => handleSort('Take')}>
+
+                        <Th
+                            onClick={() => handleSort('Take')}
+                        >
+
                             Take {getSortIcon('Take')}
+
                         </Th>
-                        <Th onClick={() => handleSort('NumAttempts')}>
+
+                        <Th
+                            onClick={() => handleSort('NumAttempts')}
+                        >
+
                             Quantity averaged {getSortIcon('NumAttempts')}
+
                         </Th>
-                        <Th onClick={() => handleSort('Margin')}>
+
+                        <Th
+                            onClick={() => handleSort('Margin')}
+                        >
+
                             Margin {getSortIcon('Margin')}
+
                         </Th>
-                        <Th onClick={() => handleSort('Funding')}>
+
+                        <Th
+                            onClick={() => handleSort('Funding')}
+                        >
+
                             Funding {getSortIcon('Funding')}
+
                         </Th>
-                        <Th onClick={() => handleSort('Size')}>
+
+                        <Th
+                            onClick={() => handleSort('Size')}
+                        >
+
                             Size {getSortIcon('Size')}
+
                         </Th>
-                        <Th onClick={() => handleSort('Time')}>
+
+                        <Th
+                            onClick={() => handleSort('Time')}
+                        >
+
                             Time {getSortIcon('Time')}
+
                         </Th>
+
                     </Tr>
+
                 </Thead>
+
                 <TBody>
+
                     {data.map((item, index) => (
-                        <StyledTableRow key={index} $pnl={item.PnL}>
-                            <Td onClick={() => console.log('name')}>{item.name}</Td>
-                            <Td>{item.entryPoint}</Td>
-                            <Td>{item.PnL}</Td>
-                            <Td>{item.ROI}</Td>
-                            <Td>{item.Take}</Td>
-                            <Td>{item.NumAttempts}</Td>
-                            <Td>{item.Margin}</Td>
-                            <Td>{item.Funding}</Td>
-                            <Td>{item.Size}</Td>
-                            <Td>{item.Time}</Td>
+
+                        <StyledTableRow
+                            key={index}
+                            $pnl={item.PnL}
+                        >
+
+                            <Td
+                                onClick={() => handleOpenPopup(item)}
+                            >
+
+                                {item.name}
+
+                            </Td>
+
+                            <Td>
+
+                                {item.entryPoint}
+
+                            </Td>
+
+                            <Td>
+
+                                {item.PnL}
+
+                            </Td>
+
+                            <Td>
+
+                                {item.ROI}
+
+                            </Td>
+
+                            <Td>
+
+                                {item.Take}
+
+                            </Td>
+
+                            <Td>
+
+                                {item.NumAttempts}
+
+                            </Td>
+
+                            <Td>
+
+                                {item.Margin}
+
+                            </Td>
+
+                            <Td>
+
+                                {item.Funding}
+
+                            </Td>
+
+                            <Td>
+
+                                {item.Size}
+
+                            </Td>
+
+                            <Td>
+
+                                {item.Time}
+
+                            </Td>
+
                         </StyledTableRow>
+
                     ))}
+
                 </TBody>
+
             </StyledTable>
+
+            {selectedData && <Popup data={selectedData} onClose={handleClosePopup} />}
+
         </>
+
     );
+
 };

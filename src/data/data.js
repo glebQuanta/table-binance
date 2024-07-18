@@ -11,7 +11,11 @@ export const initialData = [
         "Margin": "20%",
         "Funding": "100$",
         "Size": 1500,
-        "Time": "44 hours"
+        "Time": "44 hours",
+        "allTime": "1 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -24,7 +28,11 @@ export const initialData = [
         "Margin": "35%",
         "Funding": "100$",
         "Size": 2000,
-        "Time": "24 hours"
+        "Time": "24 hours",
+        "allTime": "2 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -37,7 +45,11 @@ export const initialData = [
         "Margin": "18%",
         "Funding": "100$",
         "Size": 1750,
-        "Time": "14 hours"
+        "Time": "14 hours",
+        "allTime": "3 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -50,7 +62,11 @@ export const initialData = [
         "Margin": "128%",
         "Funding": "1200$",
         "Size": 2750,
-        "Time": "124 hours"
+        "Time": "124 hours",
+        "allTime": "4 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -63,7 +79,11 @@ export const initialData = [
         "Margin": "1328%",
         "Funding": "3200$",
         "Size": 3750,
-        "Time": "324 hours"
+        "Time": "324 hours",
+        "allTime": "1.5 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -76,7 +96,11 @@ export const initialData = [
         "Margin": "5328%",
         "Funding": "5200$",
         "Size": 5750,
-        "Time": "524 hours"
+        "Time": "524 hours",
+        "allTime": "2.2 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -89,7 +113,11 @@ export const initialData = [
         "Margin": "1028%",
         "Funding": "10200$",
         "Size": 10750,
-        "Time": "24 hours"
+        "Time": "24 hours",
+        "allTime": "3.1 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -102,7 +130,11 @@ export const initialData = [
         "Margin": "1028%",
         "Funding": "10200$",
         "Size": 20750,
-        "Time": "1 hours"
+        "Time": "1 hours",
+        "allTime": "5 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -115,7 +147,11 @@ export const initialData = [
         "Margin": "2028%",
         "Funding": "220$",
         "Size": 2750,
-        "Time": "2 hours"
+        "Time": "2 hours",
+        "allTime": "1 day",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -128,7 +164,11 @@ export const initialData = [
         "Margin": "6028%",
         "Funding": "620$",
         "Size": 6750,
-        "Time": "6 hours"
+        "Time": "6 hours",
+        "allTime": "6 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -141,7 +181,11 @@ export const initialData = [
         "Margin": "7028%",
         "Funding": "720$",
         "Size": 7750,
-        "Time": "7 hours"
+        "Time": "7 hours",
+        "allTime": "2 day",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -154,7 +198,11 @@ export const initialData = [
         "Margin": "8528%",
         "Funding": "840$",
         "Size": 8750,
-        "Time": "8 hours"
+        "Time": "8 hours",
+        "allTime": "1 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -167,7 +215,11 @@ export const initialData = [
         "Margin": "20%",
         "Funding": "100$",
         "Size": 1500,
-        "Time": "44 hours"
+        "Time": "44 hours",
+        "allTime": "2 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -180,7 +232,11 @@ export const initialData = [
         "Margin": "35%",
         "Funding": "100$",
         "Size": 2000,
-        "Time": "24 hours"
+        "Time": "24 hours",
+        "allTime": "3 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -193,7 +249,11 @@ export const initialData = [
         "Margin": "18%",
         "Funding": "100$",
         "Size": 1750,
-        "Time": "14 hours"
+        "Time": "14 hours",
+        "allTime": "4.2 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -206,7 +266,11 @@ export const initialData = [
         "Margin": "128%",
         "Funding": "1200$",
         "Size": 2750,
-        "Time": "124 hours"
+        "Time": "124 hours",
+        "allTime": "2.1 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -219,7 +283,11 @@ export const initialData = [
         "Margin": "1328%",
         "Funding": "3200$",
         "Size": 3750,
-        "Time": "324 hours"
+        "Time": "324 hours",
+        "allTime": "1.5 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -232,7 +300,11 @@ export const initialData = [
         "Margin": "5328%",
         "Funding": "5200$",
         "Size": 5750,
-        "Time": "524 hours"
+        "Time": "524 hours",
+        "allTime": "10 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -245,7 +317,11 @@ export const initialData = [
         "Margin": "1028%",
         "Funding": "10200$",
         "Size": 10750,
-        "Time": "24 hours"
+        "Time": "24 hours",
+        "allTime": "2 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -258,7 +334,11 @@ export const initialData = [
         "Margin": "1028%",
         "Funding": "10200$",
         "Size": 20750,
-        "Time": "1 hours"
+        "Time": "1 hours",
+        "allTime": "3 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -271,7 +351,11 @@ export const initialData = [
         "Margin": "2028%",
         "Funding": "220$",
         "Size": 2750,
-        "Time": "2 hours"
+        "Time": "2 hours",
+        "allTime": "4 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -284,7 +368,11 @@ export const initialData = [
         "Margin": "6028%",
         "Funding": "620$",
         "Size": 6750,
-        "Time": "6 hours"
+        "Time": "6 hours",
+        "allTime": "3.2 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -297,7 +385,11 @@ export const initialData = [
         "Margin": "7028%",
         "Funding": "720$",
         "Size": 7750,
-        "Time": "7 hours"
+        "Time": "7 hours",
+        "allTime": "1 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
     {
@@ -310,7 +402,11 @@ export const initialData = [
         "Margin": "8528%",
         "Funding": "840$",
         "Size": 8750,
-        "Time": "8 hours"
+        "Time": "8 hours",
+        "allTime": "1 year",
+        "allTimePnL": "+342,60$",
+        "allTimeRoi": "+101,1%",
+        "allTimePay": "5000$"
     },
 
 ];
